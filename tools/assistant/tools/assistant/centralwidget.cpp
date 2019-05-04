@@ -623,7 +623,7 @@ bool CentralWidget::eventFilter(QObject *object, QEvent *e)
     QKeyEvent *keyEvent = static_cast<QKeyEvent*> (e);
     if (viewer == object && keyEvent->key() == Qt::Key_Backspace) {
         if (viewer->isBackwardAvailable()) {
-#if !defined(QT_NO_WEBKIT)
+#if 1
             // this helps in case there is an html <input> field
             if (!viewer->hasFocus())
 #endif

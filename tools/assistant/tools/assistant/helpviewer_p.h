@@ -47,7 +47,7 @@
 #include "openpagesmanager.h"
 
 #include <QtCore/QObject>
-#ifdef QT_NO_WEBKIT
+#if 0
 #include <QtGui/QTextBrowser>
 #endif
 
@@ -58,7 +58,7 @@ class HelpViewer::HelpViewerPrivate : public QObject
     Q_OBJECT
 
 public:
-#ifdef QT_NO_WEBKIT
+#if 0
     HelpViewerPrivate(int zoom)
         : zoomCount(zoom)
         , forceFont(false)
@@ -70,7 +70,7 @@ public:
         m_loadFinished = false;
     }
 
-#ifdef QT_NO_WEBKIT
+#if 0
     bool hasAnchorAt(QTextBrowser *browser, const QPoint& pos)
     {
         lastAnchor = browser->anchorAt(pos);

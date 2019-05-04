@@ -165,7 +165,7 @@ void FindWidget::setTextWrappedVisible(bool visible)
 void FindWidget::hideEvent(QHideEvent* event)
 {
     TRACE_OBJ
-#if !defined(QT_NO_WEBKIT)
+#if 1
     // TODO: remove this once webkit supports setting the palette
     if (!event->spontaneous())
         qApp->setPalette(appPalette);
@@ -177,7 +177,7 @@ void FindWidget::hideEvent(QHideEvent* event)
 void FindWidget::showEvent(QShowEvent* event)
 {
     TRACE_OBJ
-#if !defined(QT_NO_WEBKIT)
+#if 1
     // TODO: remove this once webkit supports setting the palette
     if (!event->spontaneous()) {
         QPalette p = appPalette;

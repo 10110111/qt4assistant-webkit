@@ -70,7 +70,7 @@ public:
     Q_SLOT void updateActions();
     Q_SLOT void setCopyAvailable(bool available);
 
-#if !defined(QT_NO_WEBKIT)
+#if 1
 private slots:
     void slotAboutToShowBackMenu();
     void slotAboutToShowNextMenu();

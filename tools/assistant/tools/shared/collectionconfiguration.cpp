@@ -64,7 +64,7 @@ namespace {
     const QString LastRegisterTime(QLatin1String("LastRegisterTime"));
     const QString LastShownPagesKey(QLatin1String("LastShownPages"));
     const QString LastZoomFactorsKey(QLatin1String(
-#if !defined(QT_NO_WEBKIT)
+#if 1
             "LastPagesZoomWebView"
 #else
             "LastPagesZoomTextBrowser"

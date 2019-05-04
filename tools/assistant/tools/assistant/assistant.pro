@@ -2,6 +2,7 @@ include(../../../shared/fontpanel/fontpanel.pri)
 TEMPLATE = app
 LANGUAGE = C++
 TARGET = assistant
+QT_CONFIG += webkit
 contains(QT_CONFIG, webkit):QT += webkit
 CONFIG += qt \
     warn_on \

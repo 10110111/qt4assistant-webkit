@@ -50,7 +50,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QFont>
 
-#if defined(QT_NO_WEBKIT)
+#if 0
 #include <QtGui/QTextBrowser>
 #else
 #include <QtWebKit/QWebView>
@@ -60,7 +60,7 @@ QT_BEGIN_NAMESPACE
 
 class HelpEngineWrapper;
 
-#if !defined(QT_NO_WEBKIT)
+#if 1
 class HelpViewer : public QWebView
 #else
 class HelpViewer : public QTextBrowser
@@ -121,7 +121,7 @@ public slots:
 
 signals:
     void titleChanged();
-#if !defined(QT_NO_WEBKIT)
+#if 1
     void copyAvailable(bool yes);
     void sourceChanged(const QUrl &url);
     void forwardAvailable(bool enabled);
